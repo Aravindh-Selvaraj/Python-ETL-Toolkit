@@ -1,0 +1,41 @@
+# ── Secrets — NEVER commit these ──────────────────────────────────
+.env
+.env.*
+!.env.example
+config/service_account.json
+*.pem
+*.key
+
+# ── Virtual environments ───────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+
+# ── Python cache and bytecode ──────────────────────────────────────
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Test and coverage artifacts ────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── IDEs and OS metadata ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── Pipeline runtime output ────────────────────────────────────────
+logs/*.log
+data/output/*.csv
+data/output/*.parquet
+
+
+# --- Tested -------
+
+pyproject.toml

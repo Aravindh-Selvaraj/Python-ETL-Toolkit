@@ -1,0 +1,11 @@
+{
+  "pipeline_name": "User_Data_Ingestion_Pipeline",
+  "environment": "development",
+  "source_url": "https://jsonplaceholder.typicode.com/users",
+  "target_path": "data/output/processed_users.csv",
+  "transformation_settings": {
+    "target_columns": ["id", "name", "username", "email", "phone", "website"],
+    "standardize_strings": true,
+    "drop_duplicates": true
+  }
+}
