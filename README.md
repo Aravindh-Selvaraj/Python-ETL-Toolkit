@@ -24,8 +24,8 @@ Python-ETL Toolkit/
 │   └── __init__.py
 ├── tests/
 │   └── test_pipeline.py          # Unit tests: all three ETL phases
-├── .env                          # Your local secrets — NEVER commit this
-├── .env.example                  # Safe template — commit this
+├── .env                          # local secrets
+├── .env.example                  # Safe template
 ├── .gitignore                    # Excludes .env, __pycache__, logs, outputs
 ├── run_pipeline.py               # Pipeline entrypoint / orchestrator
 └── setup.ps1                     # Windows PowerShell bootstrap script
@@ -140,7 +140,6 @@ Only `extract.py` needs to change when switching data sources. Everything else s
 | Source | Auth method | Change needed |
 |---|---|---|
 | REST API | API Key / Bearer Token | `.env` values only |
-| Google Sheets | Service Account JSON | `extract.py` + `.env` |
 | PostgreSQL | DB URL + password | `extract.py` + `.env` |
 | AWS S3 | Access Key + Secret | `extract.py` + `.env` |
 | CSV / Excel file | None | `extract.py` only |
